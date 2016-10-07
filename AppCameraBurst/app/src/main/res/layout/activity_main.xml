@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blue"
+        >
+
+        <TextView
+            android:id="@+id/txtNumber"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="0 pics"
+            android:gravity="center_horizontal"
+           android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorAccent"
+            android:textStyle="normal|bold"
+             />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:padding="15dp"
+            android:background="@mipmap/eye2"
+            android:textColor="@android:color/black"
+            android:layout_toStartOf="@+id/buttonCapture"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            />
+
+        <Button
+            android:id="@+id/buttonCapture"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:drawableStart="@mipmap/btn_camera"
+            android:text="Start"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true" />
+
+
+        <!--
+        android:text="Start Capture"
+        <ImageButton
+              android:id="@+id/buttonCapture"
+              android:layout_width="100dp"
+              android:layout_height="40dp"
+              android:gravity="center"
+              android:padding="10dp"
+              android:src="@drawable/btn_camera"
+              android:text="Start Capture"
+              android:textAppearance="?android:attr/textAppearanceButton"
+              android:textColor="@android:color/black"
+              android:layout_toEndOf="@id/txtNumber"
+              android:layout_alignParentBottom="true" /> -->
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:padding="2dp"
+        >
+
+        <!-- <include layout="@layout/grid_layout" /> -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:scrollbars="horizontal"
+            android:background="@color/ligthgrey">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
